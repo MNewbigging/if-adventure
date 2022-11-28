@@ -7,41 +7,37 @@ import { Fader } from '../../fader/Fader';
 import { IntroPage } from '../intro/IntroPage';
 import { Page } from '../../Page';
 import { eventListener } from '../../events/EventListener';
-import { sharedPageState } from '../../SharedPageState';
 
 export class StartPage extends Page {
-  fade = false;
+  exit = false;
 
   constructor() {
     super();
 
     makeObservable(this, {
       start: action,
-      fade: observable,
+      exit: observable,
     });
   }
 
   render(): JSX.Element {
     return (
       <div className='start-page'>
-        <Fader fadeIn={true} fadeOut={this.fade} onFadeOutEnd={this.onFadeEnd} fadeInTime={2} />
+        <Fader fadeIn={true} fadeOut={this.exit} onFadeOutEnd={this.onFadeEnd} fadeInTime={2} />
 
-        <h1>IF Adventure</h1>
-        <br />
-        <div>Water: {sharedPageState.water}</div>
-        <button onClick={() => sharedPageState.drink()}>Thirsty?</button>
+        <h1 className='title'>IF Adventure</h1>
+
         <button onClick={() => this.start()}>Start</button>
       </div>
     );
   }
 
   start() {
-    sharedPageState.increaseCount();
-    this.fade = true;
+    this.exit = true;
   }
 
   onFadeEnd = () => {
-    console.log('onFadEEnd');
+    // Can now exit this page and move to the next
     eventListener.fire('to-page', new IntroPage());
   };
 }

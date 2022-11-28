@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from 'mobx';
+import { action, makeObservable, observable, runInAction } from 'mobx';
 
 import { Page } from './Page';
 import { StartPage } from './pages/start/StartPage';
@@ -10,7 +10,7 @@ export class AppState {
   constructor() {
     eventListener.on('to-page', this.toPage);
 
-    this.currentPage = new StartPage();
+    this.toPage(new StartPage());
 
     makeObservable(this, {
       currentPage: observable,
@@ -19,6 +19,6 @@ export class AppState {
   }
 
   toPage = (page: Page) => {
-    this.currentPage = page;
+    runInAction(() => (this.currentPage = page));
   };
 }
