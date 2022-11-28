@@ -21,7 +21,7 @@ export class IntroPage extends Page {
   render(): JSX.Element {
     return (
       <div className='intro-page'>
-        <Fader fadeOut={true} fadeIn={this.fade} />
+        <Fader fadeIn={true} fadeOut={this.fade} />
         <h1>Intro</h1>
         <div>Water: {sharedPageState.water}</div>
         <button onClick={() => sharedPageState.drink()}>Thirsty?</button>

@@ -24,7 +24,13 @@ export class StartPage extends Page {
   render(): JSX.Element {
     return (
       <div className='start-page'>
-        <Fader fadeOut={false} fadeIn={this.fade} onFadeOutEnd={this.onFadeEnd} />
+        <Fader
+          fadeIn={true}
+          fadeOut={this.fade}
+          onFadeOutEnd={this.onFadeEnd}
+          fadeInTime={4}
+          fadeOutTime={0.15}
+        />
 
         <h1>IF Adventure</h1>
         <br />
@@ -41,6 +47,7 @@ export class StartPage extends Page {
   }
 
   onFadeEnd = () => {
+    console.log('onFadEEnd');
     eventListener.fire('to-page', new IntroPage());
   };
 }

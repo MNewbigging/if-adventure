@@ -8,29 +8,32 @@
   user-select: none;
   pointer-events: none;
 
+  animation-timing-function: ease-in;
+
   &.fadeIn {
-    animation: fadeIn 0.15s ease-in forwards;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
   }
 
   &.fadeOut {
-    animation: fadeOut 0.15s ease-in forwards;
+    animation-name: fadeOut;
   }
 }
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 @keyframes fadeOut {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
