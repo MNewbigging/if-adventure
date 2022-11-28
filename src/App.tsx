@@ -1,7 +1,7 @@
 import './app.scss';
 
 import React from 'react';
-import { observer } from 'mobx-react-lite';
+import { Observer, observer } from 'mobx-react-lite';
 
 import { AppState } from './AppState';
 
@@ -10,5 +10,9 @@ interface AppProps {
 }
 
 export const App: React.FC<AppProps> = observer(({ appState }) => {
-  return <div className='page-wrapper'>{appState.currentPage.render()}</div>;
+  return (
+    <div className='page-wrapper'>
+      <Observer>{() => appState.currentPage.render()}</Observer>
+    </div>
+  );
 });
