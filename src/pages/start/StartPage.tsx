@@ -28,7 +28,8 @@ export class StartPage extends Page {
 
         <h1>IF Adventure</h1>
         <br />
-        <div>Count: {sharedPageState.count}</div>
+        <div>Water: {sharedPageState.water}</div>
+        <button onClick={() => sharedPageState.drink()}>Thirsty?</button>
         <button onClick={() => this.start()}>Start</button>
       </div>
     );
