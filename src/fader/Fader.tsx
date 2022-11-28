@@ -17,7 +17,5 @@ export const Fader: React.FC<FaderProps> = observer(({ fadeOut, fadeIn, onFadeOu
   const fadeOutClass = fadeOut ? 'fadeOut' : '';
   const classes = ['fader', fadeInClass, fadeOutClass];
 
-  console.log('classes', classes);
-
   return <div className={classes.join(' ')} onAnimationEnd={() => onFadeOutEnd?.()}></div>;
 });
