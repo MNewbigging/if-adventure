@@ -19,6 +19,9 @@ class SharedPageState {
 
   drink() {
     this.water--;
+    if (this.water < 0) {
+      this.water = 0;
+    }
   }
 }
 

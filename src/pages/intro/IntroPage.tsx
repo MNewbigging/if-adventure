@@ -26,8 +26,6 @@ export class IntroPage extends Page {
         <WaterMeter />
 
         <h1>Intro</h1>
-
-        <button onClick={() => sharedPageState.drink()}>Thirsty?</button>
       </div>
     );
   }
