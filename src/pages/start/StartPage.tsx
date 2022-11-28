@@ -10,7 +10,7 @@ import { eventListener } from '../../events/EventListener';
 export class StartPage extends Page {
   render(): JSX.Element {
     return (
-      <div className='start-page'>
+      <div className='page start-page'>
         <Fader fadeIn={true} fadeOut={this.exit} onFadeOutEnd={this.onFadeEnd} fadeInTime={2} />
 
         <h1 className='title'>Tumorific Title</h1>

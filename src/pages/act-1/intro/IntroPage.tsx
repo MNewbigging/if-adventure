@@ -1,7 +1,6 @@
 import './intro-page.scss';
 
 import React from 'react';
-import { action, makeObservable, observable } from 'mobx';
 
 import { Fader } from '../../../fader/Fader';
 import { Page } from '../../../Page';
@@ -13,7 +12,7 @@ import { eventListener } from '../../../events/EventListener';
 export class IntroPage extends Page {
   render(): JSX.Element {
     return (
-      <div className='intro-page'>
+      <div className='page'>
         <Fader fadeIn={true} fadeOut={this.exit} onFadeOutEnd={this.onFadeEnd} />
         <WaterMeter />
 
