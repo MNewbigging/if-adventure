@@ -1,8 +1,8 @@
 {
-  "homepage": "https://your-user-name.github.io/your-repo-name",
-  "name": "base-template",
+  "homepage": "https://mnewbigging.github.io/if-adventure",
+  "name": "if-adventure",
   "version": "1.0.0",
-  "description": "base project template",
+  "description": "if adventure",
   "proxy": "http://localhost:8080",
   "main": "index.js",
   "scripts": {
