@@ -1,16 +1,24 @@
 import { action, makeObservable, observable } from 'mobx';
 
+import { Page } from './Page';
+import { StartPage } from './pages/start/StartPage';
+import { eventListener } from './events/EventListener';
+
 export class AppState {
-  public count = 0;
+  currentPage: Page;
 
   constructor() {
+    eventListener.on('to-page', this.toPage);
+
+    this.currentPage = new StartPage();
+
     makeObservable(this, {
-      count: observable,
-      incrementCount: action,
+      currentPage: observable,
+      toPage: action,
     });
   }
 
-  public incrementCount = () => {
-    this.count++;
+  toPage = (page: Page) => {
+    this.currentPage = page;
   };
 }
