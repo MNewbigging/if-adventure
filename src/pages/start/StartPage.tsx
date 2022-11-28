@@ -24,13 +24,7 @@ export class StartPage extends Page {
   render(): JSX.Element {
     return (
       <div className='start-page'>
-        <Fader
-          fadeIn={true}
-          fadeOut={this.fade}
-          onFadeOutEnd={this.onFadeEnd}
-          fadeInTime={4}
-          fadeOutTime={0.15}
-        />
+        <Fader fadeIn={true} fadeOut={this.fade} onFadeOutEnd={this.onFadeEnd} fadeInTime={2} />
 
         <h1>IF Adventure</h1>
         <br />

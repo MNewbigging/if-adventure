@@ -27,10 +27,10 @@ export const Fader: React.FC<FaderProps> = observer(
 
     // Work out which animation duraction to use
     let duration = 0.15;
-    if (fadeOut && fadeOutTime) {
-      duration = fadeOutTime;
-    } else if (fadeIn && fadeInTime) {
-      duration = fadeInTime;
+    if (fadeOut) {
+      duration = fadeOutTime ?? 0.15;
+    } else if (fadeIn) {
+      duration = fadeInTime ?? 0.15;
     }
 
     return (
