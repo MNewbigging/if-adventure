@@ -10,19 +10,15 @@
   display: flex;
 
   .wastes-image {
-    flex: 1 1 30%;
+    flex: 1 1 26%;
     height: 100%;
-
-    // Fits the image to the div without stretching it (maintains aspect ratio)
-    background-size: contain;
-    // Ensures image is centered within div
-    background-position: center;
-    // Don't tile the image
-    background-repeat: no-repeat;
   }
 
   .text-area {
     flex: 1 1 30%;
     height: 100%;
+    padding: 10px;
+
+    overflow-y: auto;
   }
 }

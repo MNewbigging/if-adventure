@@ -12,7 +12,7 @@ export abstract class Page {
 
   abstract render(): JSX.Element;
 
-  startExit() {
+  startExit = () => {
     this.exit = true;
-  }
+  };
 }
