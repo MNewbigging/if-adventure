@@ -12,7 +12,13 @@ export class StartPage extends Page {
   render(): JSX.Element {
     return (
       <div className='page start-page'>
-        <Fader fadeIn={true} fadeOut={this.exit} onFadeOutEnd={this.onFadeEnd} fadeInTime={2} />
+        <Fader
+          fadeIn={true}
+          fadeOut={this.exit}
+          onFadeOutEnd={this.onFadeEnd}
+          //fadeInTime={2}
+          //fadeOutTime={2}
+        />
 
         <h1 className='title'>Tumorific Title</h1>
 
@@ -23,7 +29,6 @@ export class StartPage extends Page {
 
   onFadeEnd = () => {
     // Can now exit this page and move to the next
-    //eventListener.fire('to-page', new IntroPage());
     eventListener.fire('to-page', new Page1());
   };
 }

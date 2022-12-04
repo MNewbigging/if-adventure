@@ -1,0 +1,11 @@
+.image {
+  width: 100%;
+  height: 100%;
+
+  // Fits the image to the div without stretching it (maintains aspect ratio)
+  background-size: contain;
+  // Ensures image is centered within div
+  background-position: center;
+  // Don't tile the image
+  background-repeat: no-repeat;
+}
