@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Fader } from '../../../fader/Fader';
-import { Page } from '../../../Page';
-import { Text } from '../../../text/Text';
-import { WaterMeter } from '../../../water-meter/WaterMeter';
+import { Fader } from '../../../components/fader/Fader';
+import { Page } from '../../Page';
+import { Text } from '../../../components/text/Text';
+import { WaterMeter } from '../../../components/water-meter/WaterMeter';
 import { sharedPageState } from '../../../SharedPageState';
 import { sleep } from '../../../utils/sleep';
 

@@ -1,6 +1,6 @@
 import { action, makeObservable, observable, runInAction } from 'mobx';
 
-import { Page } from './Page';
+import { Page } from './pages/Page';
 import { StartPage } from './pages/start/StartPage';
 import { eventListener } from './events/EventListener';
 

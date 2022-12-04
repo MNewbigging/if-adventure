@@ -1,4 +1,4 @@
-import { Page } from '../Page';
+import { Page } from '../pages/Page';
 
 export interface EventMap {
   'to-page': Page;

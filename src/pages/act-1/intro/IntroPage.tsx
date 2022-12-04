@@ -2,11 +2,11 @@ import './intro-page.scss';
 
 import React from 'react';
 
-import { Fader } from '../../../fader/Fader';
-import { Page } from '../../../Page';
+import { Fader } from '../../../components/fader/Fader';
+import { Page } from '../../Page';
 import { Page2 } from '../page-2/Page2';
-import { Text } from '../../../text/Text';
-import { WaterMeter } from '../../../water-meter/WaterMeter';
+import { Text } from '../../../components/text/Text';
+import { WaterMeter } from '../../../components/water-meter/WaterMeter';
 import { eventListener } from '../../../events/EventListener';
 
 export class IntroPage extends Page {

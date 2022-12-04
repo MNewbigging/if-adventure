@@ -2,9 +2,9 @@ import './start-page.scss';
 
 import React from 'react';
 
-import { Fader } from '../../fader/Fader';
+import { Fader } from '../../components/fader/Fader';
 import { IntroPage } from '../act-1/intro/IntroPage';
-import { Page } from '../../Page';
+import { Page } from '../Page';
 import { eventListener } from '../../events/EventListener';
 
 export class StartPage extends Page {

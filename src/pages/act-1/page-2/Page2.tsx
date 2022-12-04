@@ -2,11 +2,11 @@ import './page-2.scss';
 
 import React from 'react';
 
-import { Fader } from '../../../fader/Fader';
-import { Page } from '../../../Page';
+import { Fader } from '../../../components/fader/Fader';
+import { Page } from '../../Page';
 import { Page3 } from '../page-3/Page3';
-import { Text } from '../../../text/Text';
-import { WaterMeter } from '../../../water-meter/WaterMeter';
+import { Text } from '../../../components/text/Text';
+import { WaterMeter } from '../../../components/water-meter/WaterMeter';
 import { eventListener } from '../../../events/EventListener';
 import { sharedPageState } from '../../../SharedPageState';
 import { sleep } from '../../../utils/sleep';
