@@ -1,4 +1,9 @@
+@import '../../styles/palette.scss';
+
 .start-page {
+  background-color: $black;
+  color: $yellow;
+
   .title {
     font-size: 40px;
   }

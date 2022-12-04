@@ -2,8 +2,8 @@ import './start-page.scss';
 
 import React from 'react';
 
+import { ChoiceButton } from '../../components/choice-button/ChoiceButton';
 import { Fader } from '../../components/fader/Fader';
-import { IntroPage } from '../act-1/intro/IntroPage';
 import { Page } from '../Page';
 import { Page1 } from '../act-1/page-1/Page1';
 import { eventListener } from '../../events/EventListener';
@@ -22,7 +22,7 @@ export class StartPage extends Page {
 
         <h1 className='title'>Tumorific Title</h1>
 
-        <button onClick={() => this.startExit()}>Start</button>
+        <ChoiceButton content='Start' onClick={this.startExit} />
       </div>
     );
   }
