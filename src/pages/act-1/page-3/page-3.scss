@@ -1,0 +1,24 @@
+@import '../../../styles/palette.scss';
+
+.page-3 {
+  width: 100%;
+  height: 100%;
+
+  background-color: $black;
+  color: $yellow;
+
+  display: flex;
+
+  .wastes-image {
+    flex: 1 1 26%;
+    height: 100%;
+  }
+
+  .text-area {
+    flex: 1 1 30%;
+    height: 100%;
+    padding: 10px;
+
+    overflow-y: auto;
+  }
+}

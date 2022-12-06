@@ -34,7 +34,7 @@ export class Page1 extends Page {
           <Text content='Little survives the burning wastes.' />
           <Text content='A truism to all those who walk this unforgiving landscape, the deserter seems to have met a likely outcome.' />
 
-          <ChoiceButton content='1. Have a closer look' onClick={this.startExit} />
+          <ChoiceButton content='Have a closer look' onClick={this.startExit} />
         </div>
       </div>
     );
